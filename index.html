@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCC COMMAND | Gibson Pal Singh 1215</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Barlow+Condensed:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loader" class="loader">
+    <div class="loader-inner">
+        <div class="loader-emblem">
+            <img src="wall1.jpg" alt="NCC Emblem" onerror="this.style.display='none'">
+            <div class="loader-ring"></div>
+            <div class="loader-ring r2"></div>
+        </div>
+        <div class="loader-text">
+            <span class="mono">INITIALIZING NCC COMMAND PORTAL</span>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+            <span class="loader-pct" id="loadPct">0%</span>
+        </div>
+    </div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo" onclick="showPage('home')">
+            <div class="logo-emblem">★</div>
+            <div class="logo-text">NCC <span class="logo-accent">COMMAND</span></div>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#" onclick="showPage('home')" class="nav-link active" data-page="home">HOME</a>
+            <a href="#" onclick="showPage('about')" class="nav-link" data-page="about">ABOUT NCC</a>
+            <a href="#" onclick="showPage('enrolment')" class="nav-link" data-page="enrolment">ENROLMENT</a>
+            <a href="#" onclick="showPage('armoury')" class="nav-link" data-page="armoury">ARMOURY</a>
+            <a href="#" onclick="showPage('ranks')" class="nav-link" data-page="ranks">HIERARCHY</a>
+            <a href="#" onclick="showPage('camps')" class="nav-link" data-page="camps">CAMPS & EVENTS</a>
+            <a href="#" onclick="showPage('certificates')" class="nav-link" data-page="certificates">CERTIFICATES</a>
+            <a href="#" onclick="showPage('gallery')" class="nav-link" data-page="gallery">GALLERY</a>
+        </div>
+
+        <div class="nav-right">
+            <div class="service-badges">
+                <span class="svc-badge army" title="Army Wing">ARMY</span>
+                <span class="svc-badge navy" title="Navy Wing">NAVY</span>
+                <span class="svc-badge air" title="Air Force Wing">AIR FORCE</span>
+            </div>
+            <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- ====================== PAGES ====================== -->
+
+<!-- HOME PAGE -->
+<div class="page active" id="page-home">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg-video">
+            <div class="hero-bg-img"></div>
+            <div class="scanlines"></div>
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-pre">
+                <span class="pre-line"></span>
+                <span class="pre-text">NATIONAL CADET CORPS — INDIA</span>
+                <span class="pre-line"></span>
+            </div>
+            <h1 class="hero-title">
+                <span class="ht-line">FORGE THE</span>
+                <span class="ht-line accent-line">LEADERS OF</span>
+                <span class="ht-line">TOMORROW</span>
+            </h1>
+            <p class="hero-tagline">UNITY & DISCIPLINE — एकता और अनुशासन</p>
+            <div class="hero-cta">
+                <button class="btn-hero-primary" onclick="showPage('enrolment')">
+                    <span>BEGIN YOUR JOURNEY</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn-hero-secondary" onclick="showPage('armoury')">
+                    <span>EXPLORE ARMOURY</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-side-text left">DISCIPLINE</div>
+        <div class="hero-side-text right">LEADERSHIP</div>
+
+        <div class="hero-stats-bar">
+            <div class="hs-item"><span class="hs-num">13+</span><span class="hs-label">Lakh Cadets</span></div>
+            <div class="hs-divider"></div>
+            <div class="hs-item"><span class="hs-num">1948</span><span class="hs-label">Founded</span></div>
+            <div class="hs-divider"></div>
+            <div class="hs-item"><span class="hs-num">3</span><span class="hs-label">Wings</span></div>
+            <div class="hs-divider"></div>
+            <div class="hs-item"><span class="hs-num">17</span><span class="hs-label">Directorates</span></div>
+        </div>
+
+        <div class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- MISSION SECTION -->
+    <section class="mission-section">
+        <div class="section-tag">OUR PURPOSE</div>
+        <h2 class="section-title">THE NCC <span class="accent">MISSION</span></h2>
+        <div class="mission-grid">
+            <div class="mission-card" data-delay="0">
+                <div class="mc-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>DEVELOP CHARACTER</h3>
+                <p>Building strong moral foundations, ethical decision-making, and unwavering integrity in every cadet through rigorous training and mentorship.</p>
+            </div>
+            <div class="mission-card" data-delay="100">
+                <div class="mc-icon"><i class="fas fa-fist-raised"></i></div>
+                <h3>FOSTER LEADERSHIP</h3>
+                <p>Training India's future military officers and civil leaders — instilling command ability, strategic thinking and decisive action under pressure.</p>
+            </div>
+            <div class="mission-card" data-delay="200">
+                <div class="mc-icon"><i class="fas fa-flag"></i></div>
+                <h3>PROMOTE PATRIOTISM</h3>
+                <p>Igniting deep love for the motherland, fostering national integration and creating citizens willing to serve India in any capacity.</p>
+            </div>
+            <div class="mission-card" data-delay="300">
+                <div class="mc-icon"><i class="fas fa-handshake"></i></div>
+                <h3>BUILD BROTHERHOOD</h3>
+                <p>Forging bonds that last a lifetime across religion, region and language — because India's strength lies in her unity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK ACCESS GRID -->
+    <section class="quick-access">
+        <div class="section-tag">NAVIGATE</div>
+        <h2 class="section-title">COMMAND <span class="accent">CENTRE</span></h2>
+        <div class="qa-grid">
+            <div class="qa-card large" onclick="showPage('armoury')" style="--card-accent:#c8102e">
+                <div class="qa-bg" style="background-image:url('Traditional_10_22_vs_Tactical_10_22.jpg')"></div>
+                <div class="qa-overlay"></div>
+                <div class="qa-content">
+                    <span class="qa-tag">SECTION 02</span>
+                    <h3>ARMOURY</h3>
+                    <p>Explore the weapons of the NCC training system</p>
+                    <span class="qa-arrow">→</span>
+                </div>
+            </div>
+            <div class="qa-card" onclick="showPage('ranks')" style="--card-accent:#f4c542">
+                <div class="qa-bg" style="background:linear-gradient(135deg,#1a1200,#3d2e00)"></div>
+                <div class="qa-content">
+                    <span class="qa-tag">SECTION 03</span>
+                    <h3>RANK HIERARCHY</h3>
+                    <p>From L/CPL to SUO — climb the command ladder</p>
+                    <span class="qa-arrow">→</span>
+                </div>
+            </div>
+            <div class="qa-card" onclick="showPage('enrolment')" style="--card-accent:#00b2ff">
+                <div class="qa-bg" style="background:linear-gradient(135deg,#001a26,#003d5c)"></div>
+                <div class="qa-content">
+                    <span class="qa-tag">SECTION 01</span>
+                    <h3>JOIN THE CORPS</h3>
+                    <p>Enrolment process, eligibility and requirements</p>
+                    <span class="qa-arrow">→</span>
+                </div>
+            </div>
+            <div class="qa-card" onclick="showPage('camps')" style="--card-accent:#00d9a0">
+                <div class="qa-bg" style="background:linear-gradient(135deg,#00150e,#003d2a)"></div>
+                <div class="qa-content">
+                    <span class="qa-tag">SECTION 04</span>
+                    <h3>CAMPS & EVENTS</h3>
+                    <p>Annual Training Camps, NIC, TSC and more</p>
+                    <span class="qa-arrow">→</span>
+                </div>
+            </div>
+            <div class="qa-card" onclick="showPage('certificates')" style="--card-accent:#ff6b35">
+                <div class="qa-bg" style="background:linear-gradient(135deg,#1a0a00,#3d2000)"></div>
+                <div class="qa-content">
+                    <span class="qa-tag">SECTION 05</span>
+                    <h3>CERTIFICATES</h3>
+                    <p>A, B & C Certificate — your gateway to the forces</p>
+                    <span class="qa-arrow">→</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS COUNTER -->
+    <div class="stats-band">
+        <div class="stat-item">
+            <div class="stat-num counter" data-target="13">0</div>
+            <div class="stat-label">Lakh+ Active Cadets</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num counter" data-target="17">0</div>
+            <div class="stat-label">Directorates</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num counter" data-target="96">0</div>
+            <div class="stat-label">Group HQ</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num counter" data-target="76">0</div>
+            <div class="stat-label">Years of Excellence</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num counter" data-target="3">0</div>
+            <div class="stat-label">Wings</div>
+        </div>
+    </div>
+
+    <!-- PROJECT CREDIT HOME -->
+    <div class="credit-bar">
+        <span>PROJECT BY <strong>GIBSON PAL SINGH (Roll No. 1215)</strong> — CSE 4th Semester, GNDEC Ludhiana</span>
+    </div>
+</div>
+
+<!-- ABOUT NCC PAGE -->
+<div class="page" id="page-about">
+    <div class="page-hero about-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <div class="page-tag">SECTION 00</div>
+            <h1>ABOUT <span class="accent">NCC</span></h1>
+            <p>The Largest Uniformed Youth Organisation in the World</p>
+        </div>
+    </div>
+
+    <div class="page-body">
+        <div class="content-section">
+            <div class="two-col">
+                <div class="col-text">
+                    <h2 class="content-h2">OUR <span class="accent">HISTORY</span></h2>
+                    <p>The National Cadet Corps (NCC) was established on <strong>16 April, 1948</strong> under the National Cadet Corps Act of 1948. It emerged from the University Corps established during British rule in 1942, which was initially formed to train youth for military service during World War II.</p>
+                    <p style="margin-top:20px">After independence, visionary leaders recognized that India needed a trained, disciplined youth force that could serve the nation — both in military and civil capacities. The NCC was born with the motto <strong>"Unity and Discipline"</strong> (एकता और अनुशासन), a principle that continues to guide over 13 lakh cadets across all 29 states and 7 union territories.</p>
+                    <p style="margin-top:20px">The corps has three wings: <span class="accent">Army Wing</span>, <span class="accent">Naval Wing</span>, and <span class="accent">Air Force Wing</span> — each providing specialized training that prepares young Indians for service in the armed forces and beyond.</p>
+                </div>
+                <div class="col-visual">
+                    <div class="emblem-display">
+                        <img src="wall1.jpg" alt="India Emblem" class="emblem-img">
+                        <div class="emblem-caption">सत्यमेव जयते — Truth Alone Triumphs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section dark-cs">
+            <h2 class="content-h2 center">THE THREE <span class="accent">WINGS</span></h2>
+            <div class="wings-grid">
+                <div class="wing-card army-wing">
+                    <div class="wing-icon"><i class="fas fa-star"></i></div>
+                    <h3>ARMY WING</h3>
+                    <div class="wing-tag">Since 1948</div>
+                    <p>The largest wing of the NCC, the Army Wing trains cadets in drill, weapon handling, map reading, field craft and battle tactics. Cadets wear the distinctive olive green uniform with an army-pattern beret.</p>
+                    <ul class="wing-list">
+                        <li>Basic & Advanced Weapon Training</li>
+                        <li>Field Craft & Battle Exercises</li>
+                        <li>Map Reading & Navigation</li>
+                        <li>Obstacle Course Training</li>
+                    </ul>
+                </div>
+                <div class="wing-card navy-wing">
+                    <div class="wing-icon"><i class="fas fa-anchor"></i></div>
+                    <h3>NAVAL WING</h3>
+                    <div class="wing-tag">Since 1952</div>
+                    <p>The Naval Wing exposes cadets to seamanship, boat pulling, sailing, swimming and naval engineering. Cadets get the unique opportunity to sail aboard INS vessels and experience life at sea.</p>
+                    <ul class="wing-list">
+                        <li>Seamanship & Navigation</li>
+                        <li>Boat Pulling & Sailing</li>
+                        <li>Voyage aboard Naval Ships</li>
+                        <li>Coastal Treking Expeditions</li>
+                    </ul>
+                </div>
+                <div class="wing-card air-wing">
+                    <div class="wing-icon"><i class="fas fa-fighter-jet"></i></div>
+                    <h3>AIR FORCE WING</h3>
+                    <div class="wing-tag">Since 1950</div>
+                    <p>The Air Force Wing is every aviation enthusiast's dream — cadets learn about aeronautics, radio communication, meteorology and even get opportunities for air experience flights in IAF aircraft.</p>
+                    <ul class="wing-list">
+                        <li>Aeronautics & Aviation Theory</li>
+                        <li>Gliding & Air Experience Flights</li>
+                        <li>Radio Communication</li>
+                        <li>Meteorology & Air Navigation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="content-h2 center">NOTABLE <span class="accent">ALUMNI</span></h2>
+            <p class="center-text">NCC has produced some of India's most celebrated leaders — across the military, politics and public service.</p>
+            <div class="alumni-grid">
+                <div class="alumni-card">
+                    <div class="alumni-rank">Field Marshal</div>
+                    <h4>Sam Manekshaw</h4>
+                    <p>India's first Field Marshal, Chief of Army Staff during the 1971 war — the man who turned East Pakistan into Bangladesh.</p>
+                </div>
+                <div class="alumni-card">
+                    <div class="alumni-rank">President of India</div>
+                    <h4>Dr. A.P.J. Abdul Kalam</h4>
+                    <p>The Missile Man of India and beloved former President — an NCC cadet whose ambition and discipline shaped a nation's future.</p>
+                </div>
+                <div class="alumni-card">
+                    <div class="alumni-rank">Mountaineer</div>
+                    <h4>Bachendri Pal</h4>
+                    <p>First Indian woman to summit Mount Everest — her NCC training built the mental toughness to conquer the world's highest peak.</p>
+                </div>
+                <div class="alumni-card">
+                    <div class="alumni-rank">Air Chief Marshal</div>
+                    <h4>Birender Singh Dhanoa</h4>
+                    <p>Former Chief of Air Staff of the Indian Air Force — his NCC days in the Air Force Wing were the launchpad for an illustrious career.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ENROLMENT PAGE -->
+<div class="page" id="page-enrolment">
+    <div class="page-hero enrol-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <div class="page-tag">SECTION 01</div>
+            <h1>JOIN THE <span class="accent">CORPS</span></h1>
+            <p>The Process That Transforms Students into Soldiers</p>
+        </div>
+    </div>
+
+    <div class="page-body">
+        <div class="content-section">
+            <h2 class="content-h2 center">ELIGIBILITY <span class="accent">CRITERIA</span></h2>
+            <div class="eligibility-grid">
+                <div class="elig-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <h4>STUDENT STATUS</h4>
+                    <p>Must be a regular student of a school or college affiliated with a recognised university or board</p>
+                </div>
+                <div class="elig-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h4>AGE LIMIT</h4>
+                    <p>12 to 26 years for Junior Division / Wing and Senior Division / Wing cadets respectively</p>
+                </div>
+                <div class="elig-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <h4>MEDICAL FITNESS</h4>
+                    <p>Medically fit as per the standards prescribed by a registered medical officer — no serious ailments</p>
+                </div>
+                <div class="elig-item">
+                    <i class="fas fa-flag-checkered"></i>
+                    <h4>NATIONALITY</h4>
+                    <p>Indian citizen only. Citizens of Nepal and Bhutan enrolled in recognised institutions may also join</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section dark-cs">
+            <h2 class="content-h2 center">THE <span class="accent">ENROLMENT PROCESS</span></h2>
+            <div class="process-timeline">
+                <div class="pt-step">
+                    <div class="pt-num">01</div>
+                    <div class="pt-content">
+                        <h3>APPLICATION & REGISTRATION</h3>
+                        <p>Collect the enrolment form from the ANO (Associate NCC Officer) or your institution's NCC unit. Fill in personal details, academic records and choose your preferred wing (Army / Navy / Air Force). Submit along with passport-sized photographs.</p>
+                    </div>
+                </div>
+                <div class="pt-step">
+                    <div class="pt-num">02</div>
+                    <div class="pt-content">
+                        <h3>DOCUMENT VERIFICATION</h3>
+                        <p>Submit: Aadhaar Card / Birth Certificate, Class 10th Marksheet, Bonafide Certificate from institution, Parent / Guardian Consent Form, Medical Fitness Certificate (from a MBBS doctor), Caste Certificate (if applicable for reservation), and 6 passport-size photographs.</p>
+                        <div class="doc-checklist">
+                            <span class="doc-item">✓ Aadhaar Card</span>
+                            <span class="doc-item">✓ Class 10 Marksheet</span>
+                            <span class="doc-item">✓ Bonafide Certificate</span>
+                            <span class="doc-item">✓ Consent Form</span>
+                            <span class="doc-item">✓ Medical Certificate</span>
+                            <span class="doc-item">✓ 6 Photographs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-step">
+                    <div class="pt-num">03</div>
+                    <div class="pt-content">
+                        <h3>PHYSICAL EFFICIENCY TEST (PET)</h3>
+                        <p>A standardized physical fitness test to assess the cadet's baseline fitness. Don't worry — this is an entry-level test, not an army selection board. Train for 2–3 weeks before attempting.</p>
+                        <div class="pet-table">
+                            <div class="pet-row header">
+                                <span>EVENT</span><span>BOYS</span><span>GIRLS</span>
+                            </div>
+                            <div class="pet-row">
+                                <span>1.6 km Run</span><span>≤ 7 min 30 sec</span><span>≤ 9 min</span>
+                            </div>
+                            <div class="pet-row">
+                                <span>Push-Ups</span><span>Minimum 15</span><span>Minimum 8</span>
+                            </div>
+                            <div class="pet-row">
+                                <span>Sit-Ups</span><span>Minimum 20</span><span>Minimum 15</span>
+                            </div>
+                            <div class="pet-row">
+                                <span>Standing Long Jump</span><span>≥ 3.5 metres</span><span>≥ 2.5 metres</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-step">
+                    <div class="pt-num">04</div>
+                    <div class="pt-content">
+                        <h3>PERSONAL INTERVIEW</h3>
+                        <p>A brief interview with the ANO to assess motivation, discipline, communication and patriotic intent. Be honest, speak with confidence and show genuine enthusiasm for national service. Common questions include: Why do you want to join NCC? What do you know about the Indian Armed Forces? Are you willing to attend camps?</p>
+                        <div class="tips-box">
+                            <div class="tips-title">PRO TIPS</div>
+                            <p>→ Wear formal clothes. Sit straight. Give firm handshake.<br>
+                            → Know the NCC motto, flag colours and your wing's history.<br>
+                            → Express patriotism naturally — don't overdo it.<br>
+                            → Ask one intelligent question at the end.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-step">
+                    <div class="pt-num">05</div>
+                    <div class="pt-content">
+                        <h3>OATH TAKING & ENROLMENT</h3>
+                        <p>Upon selection, you will take the solemn NCC Pledge before the Commanding Officer. This is the official moment you become an NCC cadet. You will be issued your uniform, service number, and NCC identity card. Attend the first parade proudly — you have earned your place.</p>
+                        <blockquote class="oath-box">
+                            "I (name), sincerely promise that I will serve my Motherland honestly and faithfully, that I will abide by the rules and regulations of the National Cadet Corps, and that I will strive to become a worthy citizen of my country."
+                            <footer>— The NCC Pledge</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ARMOURY PAGE -->
+<div class="page" id="page-armoury">
+    <div class="page-hero armoury-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <div class="page-tag">SECTION 02</div>
+            <h1>TRAINING <span class="accent">ARMOURY</span></h1>
+            <p>Master the Tools of Precision and Discipline</p>
+        </div>
+    </div>
+
+    <div class="page-body">
+        <div class="content-section">
+            <p class="intro-text">The NCC uses a carefully curated selection of infantry weapons for training purposes. Every cadet learns the fundamentals of safe weapon handling, firing positions and basic marksmanship — skills that build focus, confidence and discipline regardless of career path.</p>
+        </div>
+
+        <!-- WEAPON: .22 DELUXE RIFLE -->
+        <div class="weapon-profile">
+            <div class="wp-header">
+                <div class="wp-num">W-01</div>
+                <div class="wp-title">
+                    <h2>.22 DELUXE RIFLE</h2>
+                    <span class="wp-role">Primary Training Weapon</span>
+                </div>
+                <div class="wp-calibre">.22 LR</div>
+            </div>
+            <div class="wp-body">
+                <div class="wp-image-wrap">
+                    <img src="22 rifle.jpeg" alt=".22 Deluxe Rifle" class="wp-image">
+                    <div class="wp-img-overlay">
+                        <span class="img-label">Standard &amp; Tactical Variants</span>
+                    </div>
+                </div>
+                <div class="wp-details">
+                    <div class="wp-specs">
+                        <div class="spec-row"><span class="spec-key">CALIBRE</span><span class="spec-val">.22 Long Rifle (LR)</span></div>
+                        <div class="spec-row"><span class="spec-key">ACTION</span><span class="spec-val">Bolt-Action / Semi-Auto</span></div>
+                        <div class="spec-row"><span class="spec-key">EFFECTIVE RANGE</span><span class="spec-val">50 – 100 metres</span></div>
+                        <div class="spec-row"><span class="spec-key">MAGAZINE</span><span class="spec-val">5 – 10 rounds</span></div>
+                        <div class="spec-row"><span class="spec-key">WEIGHT</span><span class="spec-val">Approx. 2.7 kg (unloaded)</span></div>
+                        <div class="spec-row"><span class="spec-key">PURPOSE</span><span class="spec-val">Indoor & Target Range Training</span></div>
+                    </div>
+                    <div class="wp-description">
+                        <p>The .22 Deluxe Rifle is the <strong>entry weapon</strong> for every NCC cadet — the tool that introduces you to the discipline of marksmanship. Its low recoil and manageable noise make it perfect for beginners learning proper grip, breathing technique, trigger control and sight alignment.</p>
+                        <p>Cadets fire this weapon on indoor and outdoor ranges, aiming for paper targets at 25–50 metres. A perfect score demands extraordinary concentration — building the mental discipline that translates directly to leadership and academic performance.</p>
+                        <p>The .22 LR cartridge is the most widely used ammunition in the world — affordable, accurate and safe for training environments.</p>
+                    </div>
+                    <div class="firing-positions">
+                        <div class="fp-title">FIRING POSITIONS TRAINED</div>
+                        <div class="fp-grid">
+                            <span class="fp-item">🎯 Prone</span>
+                            <span class="fp-item">🎯 Kneeling</span>
+                            <span class="fp-item">🎯 Standing</span>
+                            <span class="fp-item">🎯 Sitting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WEAPON: INSAS -->
+        <div class="weapon-profile alt-profile">
+            <div class="wp-header">
+                <div class="wp-num">W-02</div>
+                <div class="wp-title">
+                    <h2>5.56mm INSAS RIFLE</h2>
+                    <span class="wp-role">Indian Standard Assault Rifle</span>
+                </div>
+                <div class="wp-calibre">5.56mm</div>
+            </div>
+            <div class="wp-body reverse">
+                <div class="wp-image-wrap">
+                    <img src="INSAS.jpg" alt="INSAS Rifle" class="wp-image">
+                    <div class="wp-img-overlay">
+                        <span class="img-label">INSAS — Indian Small Arms System</span>
+                    </div>
+                </div>
+                <div class="wp-details">
+                    <div class="wp-specs">
+                        <div class="spec-row"><span class="spec-key">CALIBRE</span><span class="spec-val">5.56 × 45 mm NATO</span></div>
+                        <div class="spec-row"><span class="spec-key">ACTION</span><span class="spec-val">Gas-operated, Rotating Bolt</span></div>
+                        <div class="spec-row"><span class="spec-key">EFFECTIVE RANGE</span><span class="spec-val">400 metres</span></div>
+                        <div class="spec-row"><span class="spec-key">MAGAZINE</span><span class="spec-val">20 rounds (translucent)</span></div>
+                        <div class="spec-row"><span class="spec-key">WEIGHT</span><span class="spec-val">3.2 kg (unloaded)</span></div>
+                        <div class="spec-row"><span class="spec-key">RATE OF FIRE</span><span class="spec-val">~650 rounds per minute</span></div>
+                        <div class="spec-row"><span class="spec-key">COUNTRY OF ORIGIN</span><span class="spec-val">India (DRDO / OFB)</span></div>
+                    </div>
+                    <div class="wp-description">
+                        <p>The INSAS (Indian Small Arms System) is the <strong>standard assault rifle of the Indian Armed Forces</strong> — a weapon designed and manufactured entirely in India by DRDO and the Ordnance Factory Board. It entered service in 1998, replacing the 7.62mm SLR.</p>
+                        <p>Its distinctive translucent magazine, folding bipod and in-built grenade launching capability make it a versatile battlefield weapon. For NCC cadets, the INSAS represents advanced training — you handle, dismantle, reassemble and dry-fire this weapon, developing deep respect for the armed forces.</p>
+                        <p>Made in India. Used by India. A symbol of indigenous defence capability.</p>
+                    </div>
+                    <div class="india-badge">🇮🇳 DESIGNED &amp; MADE IN INDIA</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WEAPON: 7.62 SLR -->
+        <div class="weapon-profile">
+            <div class="wp-header">
+                <div class="wp-num">W-03</div>
+                <div class="wp-title">
+                    <h2>7.62mm SELF LOADING RIFLE</h2>
+                    <span class="wp-role">Battle-Proven Legacy Weapon</span>
+                </div>
+                <div class="wp-calibre">7.62mm</div>
+            </div>
+            <div class="wp-body">
+                <div class="wp-image-wrap">
+                    <img src="SRL.jpg" alt="7.62 SLR" class="wp-image">
+                    <div class="wp-img-overlay">
+                        <span class="img-label">7.62mm SLR — The Workhorse of the Indian Army</span>
+                    </div>
+                </div>
+                <div class="wp-details">
+                    <div class="wp-specs">
+                        <div class="spec-row"><span class="spec-key">CALIBRE</span><span class="spec-val">7.62 × 51 mm NATO</span></div>
+                        <div class="spec-row"><span class="spec-key">ACTION</span><span class="spec-val">Gas-operated, Semi-Automatic</span></div>
+                        <div class="spec-row"><span class="spec-key">EFFECTIVE RANGE</span><span class="spec-val">600 – 800 metres</span></div>
+                        <div class="spec-row"><span class="spec-key">MAGAZINE</span><span class="spec-val">20 rounds</span></div>
+                        <div class="spec-row"><span class="spec-key">WEIGHT</span><span class="spec-val">4.3 kg (unloaded)</span></div>
+                        <div class="spec-row"><span class="spec-key">ORIGIN</span><span class="spec-val">FN FAL (Belgium), India-licensed</span></div>
+                    </div>
+                    <div class="wp-description">
+                        <p>The 7.62mm SLR (Self-Loading Rifle) is the <strong>battle rifle that won wars for India</strong>. Used extensively during the 1965 and 1971 Indo-Pakistani Wars, this weapon has legendary status in the Indian Army. The heavy 7.62mm round hits hard and flies far — making it a formidable long-range infantry weapon.</p>
+                        <p>Indian soldiers who carried the SLR across the battlefields of Longewala, Shakargarh and Dhaka speak of its stopping power with reverence. For NCC cadets, learning the SLR means understanding the heritage of the Indian Army.</p>
+                        <p>Though replaced by the INSAS in active service, the SLR continues to be used in training and ceremonial contexts — a testament to its enduring legacy.</p>
+                    </div>
+                    <div class="legacy-badge">🏆 FIELD-PROVEN IN 1965 &amp; 1971 WARS</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WEAPON TRAINING FUNDAMENTALS -->
+        <div class="content-section dark-cs">
+            <h2 class="content-h2 center">WEAPON HANDLING <span class="accent">FUNDAMENTALS</span></h2>
+            <div class="fundamentals-grid">
+                <div class="fund-card">
+                    <div class="fund-num">01</div>
+                    <h4>SAFETY FIRST</h4>
+                    <p>Never point a weapon at anything you don't intend to shoot. Treat every weapon as if it's loaded — always. The safety drill is not a formality; it is a discipline of mind.</p>
+                </div>
+                <div class="fund-card">
+                    <div class="fund-num">02</div>
+                    <h4>PROPER GRIP</h4>
+                    <p>Your grip must be firm but not tense. The weapon should feel like an extension of your arm — balanced, controlled, natural. Practice dry grip daily.</p>
+                </div>
+                <div class="fund-card">
+                    <div class="fund-num">03</div>
+                    <h4>BREATHING CONTROL</h4>
+                    <p>Fire between heartbeats during the natural respiratory pause. Hold your breath partially — never fully — to steady your aim. Panic breathing = missed shots.</p>
+                </div>
+                <div class="fund-card">
+                    <div class="fund-num">04</div>
+                    <h4>SIGHT ALIGNMENT</h4>
+                    <p>Front sight, rear sight and target must be in perfect alignment. Focus your eye on the front sight post — the target will naturally blur. Trust the technique.</p>
+                </div>
+                <div class="fund-card">
+                    <div class="fund-num">05</div>
+                    <h4>TRIGGER CONTROL</h4>
+                    <p>Squeeze — never pull — the trigger with slow, even pressure using only the pad of your index finger. Jerking the trigger is the single most common cause of missed shots.</p>
+                </div>
+                <div class="fund-card">
+                    <div class="fund-num">06</div>
+                    <h4>FOLLOW THROUGH</h4>
+                    <p>Maintain your sight picture and grip through the shot break and slightly after. Do not relax or anticipate the shot — the weapon must be steady at the moment of firing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- RANKS PAGE -->
+<div class="page" id="page-ranks">
+    <div class="page-hero ranks-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <div class="page-tag">SECTION 03</div>
+            <h1>RANK <span class="accent">HIERARCHY</span></h1>
+            <p>The Chain of Command — From Cadet to Commander</p>
+        </div>
+    </div>
+
+    <div class="page-body">
+        <div class="content-section">
+            <p class="intro-text">In the NCC, rank is not given — it is earned through consistent performance, exemplary discipline, leadership skills and dedication to the corps. Every rank comes with greater responsibility and greater honour.</p>
+        </div>
+
+        <div class="ranks-pyramid">
+            <!-- SUO -->
+            <div class="rank-level suo-level">
+                <div class="rank-full-card suo-card">
+                    <div class="rfc-badge suo-badge">SUO</div>
+                    <div class="rfc-details">
+                        <h2>SENIOR UNDER OFFICER</h2>
+                        <div class="rfc-subtitle">Highest Cadet Rank — Battalion Commander</div>
+                        <p>The SUO is the apex of cadet leadership — a position of immense honour and equally immense responsibility. The SUO commands the entire cadet battalion, liaises directly with the Commanding Officer (Colonel), and represents the corps at RDC (Republic Day Camp) and other national events.</p>
+                        <p style="margin-top:15px">An SUO is expected to be a role model in every aspect — dress, conduct, academic performance, physical fitness and moral character. They mentor all junior ranks and are the visible face of the unit's excellence.</p>
+                        <div class="rfc-criteria">
+                            <div class="criteria-title">SELECTION CRITERIA</div>
+                            <div class="criteria-grid">
+                                <span>★ Minimum 3 years of NCC service</span>
+                                <span>★ 'C' Certificate holder</span>
+                                <span>★ Outstanding parade performance</span>
+                                <span>★ Recommendation by ANO & CO</span>
+                                <span>★ Clean disciplinary record</span>
+                                <span>★ Proven leadership in camps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JUO -->
+            <div class="rank-level">
+                <div class="rank-full-card">
+                    <div class="rfc-badge juo-badge">JUO</div>
+                    <div class="rfc-details">
+                        <h2>JUNIOR UNDER OFFICER</h2>
+                        <div class="rfc-subtitle">Company Commander</div>
+                        <p>The JUO commands an entire company of cadets (typically 3–4 platoons, ~120-160 cadets). This rank is awarded to exceptional SGTs who demonstrate outstanding leadership potential. JUOs plan and execute major parades, camps and ceremonial events alongside the ANO.</p>
+                        <div class="rfc-criteria">
+                            <div class="criteria-title">REQUIREMENTS</div>
+                            <div class="criteria-grid">
+                                <span>★ Minimum 2 years of service</span>
+                                <span>★ 'B' Certificate mandatory</span>
+                                <span>★ Excellence in drills & parades</span>
+                                <span>★ Leadership in Annual Training Camps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SGT -->
+            <div class="rank-level">
+                <div class="rank-full-card">
+                    <div class="rfc-badge sgt-badge">SGT</div>
+                    <div class="rfc-details">
+                        <h2>SERGEANT</h2>
+                        <div class="rfc-subtitle">Platoon Leader — Commands 30-40 Cadets</div>
+                        <p>The Sergeant is a pivotal rank in the NCC hierarchy. As Platoon Leader, the SGT is responsible for the training, welfare and discipline of an entire platoon. They train junior cadets in drill movements, weapon handling procedures and field craft exercises.</p>
+                        <p style="margin-top:15px">SGTs are the backbone of every parade — their commands synchronize the movements of dozens of cadets. They also lead the platoon during Annual Training Camps (ATC) and are frequently nominated for specialist camps like the Thal Sainik Camp.</p>
+                        <div class="rfc-criteria">
+                            <div class="criteria-title">REQUIREMENTS</div>
+                            <div class="criteria-grid">
+                                <span>★ Minimum 18 months service</span>
+                                <span>★ 'A' Certificate preferred</span>
+                                <span>★ 80%+ parade attendance</span>
+                                <span>★ Passed 'B' Certificate exam</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CPL -->
+            <div class="rank-level">
+                <div class="rank-full-card">
+                    <div class="rfc-badge cpl-badge">CPL</div>
+                    <div class="rfc-details">
+                        <h2>CORPORAL</h2>
+                        <div class="rfc-subtitle">Section Commander — Commands 8-10 Cadets</div>
+                        <p>The Corporal commands a section — the basic tactical unit. CPLs are responsible for the day-to-day training, discipline and welfare of their 8-10 cadets. They conduct early morning PT drills, check uniform standards and report to the Sergeant.</p>
+                        <p style="margin-top:15px">The CPL rank develops strong management skills — the ability to motivate a small team, resolve conflicts and maintain standards under pressure are lessons that last a lifetime far beyond the corps.</p>
+                        <div class="rfc-criteria">
+                            <div class="criteria-title">REQUIREMENTS</div>
+                            <div class="criteria-grid">
+                                <span>★ 1 year of NCC service</span>
+                                <span>★ Regular parade attendance</span>
+                                <span>★ Passed basic weapon training</span>
+                                <span>★ Good conduct record</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LCPL -->
+            <div class="rank-level">
+                <div class="rank-full-card">
+                    <div class="rfc-badge lcpl-badge">L/CPL</div>
+                    <div class="rfc-details">
+                        <h2>LANCE CORPORAL</h2>
+                        <div class="rfc-subtitle">First Step Into Leadership</div>
+                        <p>The Lance Corporal is the first rung of the leadership ladder. Awarded after consistent performance in parades, weapon training and general conduct, this rank is your corps' way of saying: <em>"We see potential in you."</em></p>
+                        <p style="margin-top:15px">L/CPLs assist the Corporal in managing their section, lead small groups during physical training, and begin to take responsibility for the conduct of junior cadets. It's the hardest transition — from being led to starting to lead.</p>
+                        <div class="rfc-criteria">
+                            <div class="criteria-title">REQUIREMENTS</div>
+                            <div class="criteria-grid">
+                                <span>★ 6 months of NCC service</span>
+                                <span>★ Regular parade attendance</span>
+                                <span>★ Good conduct & discipline</span>
+                                <span>★ Completion of basic training</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CDT -->
+            <div class="rank-level">
+                <div class="rank-full-card">
+                    <div class="rfc-badge cdt-badge">CDT</div>
+                    <div class="rfc-details">
+                        <h2>CADET</h2>
+                        <div class="rfc-subtitle">The Beginning of an Extraordinary Journey</div>
+                        <p>Every great officer was once a Cadet. The Cadet rank is where you learn the fundamentals — how to stand at attention, how to salute, how to wear a uniform with pride, how to fire a weapon safely, how to march in perfect synchrony with your platoon.</p>
+                        <p style="margin-top:15px">Being a Cadet means being a student of discipline — observing the senior ranks, absorbing their techniques, and beginning to develop the mindset that separates a soldier from a civilian. Every legend started here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OFFICER RANKS -->
+        <div class="content-section dark-cs">
+            <h2 class="content-h2 center">OFFICER <span class="accent">STRUCTURE</span></h2>
+            <p class="center-text" style="margin-bottom:40px">Above the cadet ranks is the officer structure — permanent commissioned officers who guide and command the NCC units.</p>
+            <div class="officer-grid">
+                <div class="officer-card">
+                    <div class="officer-rank">LT COL / CDR / SQN LDR</div>
+                    <h4>Commanding Officer</h4>
+                    <p>Commands the entire NCC Battalion / Group. Ultimately responsible for all training, discipline and administrative matters.</p>
+                </div>
+                <div class="officer-card">
+                    <div class="officer-rank">MAJOR / LT CDR / FLT LT</div>
+                    <h4>Associate NCC Officer</h4>
+                    <p>The ANO is the primary officer you interact with as a cadet. They conduct parades, manage administration and mentor senior cadets.</p>
+                </div>
+                <div class="officer-card">
+                    <div class="officer-rank">JCO / HONORARY</div>
+                    <h4>Permanent Instructor</h4>
+                    <p>Retired service personnel who provide specialized weapon training, drill instruction and field craft expertise.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CAMPS PAGE -->
+<div class="page" id="page-camps">
+    <div class="page-hero camps-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <div class="page-tag">SECTION 04</div>
+            <h1>CAMPS <span class="accent">&amp; EVENTS</span></h1>
+            <p>Where Training Meets Adventure</p>
+        </div>
+    </div>
+
+    <div class="page-body">
+        <div class="content-section">
+            <p class="intro-text">NCC camps are where the real magic happens. Away from the parade ground and into the field — cadets develop resilience, teamwork, adaptability and memories that last a lifetime. Every camp is a crucible that reveals character.</p>
+        </div>
+
+        <div class="camps-grid">
+            <div class="camp-card featured-camp">
+                <div class="camp-icon"><i class="fas fa-flag"></i></div>
+                <div class="camp-tag">NATIONAL PRESTIGE</div>
+                <h3>REPUBLIC DAY CAMP (RDC)</h3>
+                <div class="camp-location"><i class="fas fa-map-marker-alt"></i> New Delhi, January</div>
+                <p>The pinnacle of NCC achievement. Selected cadets from every directorate march past the President of India at Rajpath / Kartavya Path. This is not just a parade — it is a national honour awarded to India's finest cadets. Preparation spans 3–4 months of intensive training. Being an RDC cadet changes you forever.</p>
+                <div class="camp-highlights">
+                    <span>Prime Minister's Rally</span>
+                    <span>Interservice Activities</span>
+                    <span>Cultural Night</span>
+                    <span>PM's Interaction</span>
+                </div>
+            </div>
+
+            <div class="camp-card">
+                <div class="camp-icon"><i class="fas fa-mountain"></i></div>
+                <div class="camp-tag">ADVENTURE</div>
+                <h3>ANNUAL TRAINING CAMP (ATC)</h3>
+                <div class="camp-location"><i class="fas fa-map-marker-alt"></i> Various Locations</div>
+                <p>The mandatory Annual Training Camp runs for 10 days and covers weapon training, obstacle courses, map reading, first aid, cross-country marches and leadership exercises. This camp is required for Certificate examinations.</p>
+                <div class="camp-highlights">
+                    <span>10 Days</span>
+                    <span>Weapon Firing</span>
+                    <span>Map Reading</span>
+                    <span>Night Exercises</span>
+                </div>
+            </div>
+
+            <div class="camp-card">
+                <div class="camp-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="camp-tag">ELITE COMPETITION</div>
+                <h3>THAL SAINIK CAMP (TSC)</h3>
+                <div class="camp-location"><i class="fas fa-map-marker-alt"></i> New Delhi</div>
+                <p>A competitive camp where the best Army Wing cadets from all 17 directorates compete in weapon training, obstacle race, cross-country, drill and general knowledge. TSC winners are selected for the prestigious RDC contingent.</p>
+                <div class="camp-highlights">
+                    <span>Inter-Directorate</span>
+                    <span>Weapon Competition</span>
+                    <span>Obstacle Race</span>
+                    <span>Best Cadet Award</span>
+                </div>
+            </div>
+
+            <div class="camp-card">
+                <div class="camp-icon"><i class="fas fa-anchor"></i></div>
+                <div class="camp-tag">NAVAL ADVENTURE</div>
+                <h3>NAUSENA SAINIK CAMP (NSC)</h3>
+                <div class="camp-location"><i class="fas fa-map-marker-alt"></i> Mumbai / Kochi / Visakhapatnam</div>
+                <p>The naval equivalent of TSC — naval wing cadets compete in seamanship, boat pulling, swimming, rowing and shipboard knowledge. Selected cadets get a chance to sail aboard INS vessels — an experience few civilians ever have.</p>
+                <div class="camp-highlights">
+                    <span>Ship Voyages</span>
+                    <span>Boat Pulling</span>
+                    <span>Swimming Tests</span>
+                    <span>Seamanship</span>
+                </div>
+            </div>
+
+            <div class="camp-card">
+                <div class="camp-icon"><i class="fas fa-fighter-jet"></i></div>
+                <div class="camp-tag">AVIATION CAMP</div>
+                <h3>VAYU SAINIK CAMP (VSC)</h3>
+                <div class="camp-location"><i class="fas fa-map-marker-alt"></i> Air Force Stations</div>
+                <p>Air Force wing cadets get to experience life at an IAF station — watching fighters, attending ATC briefings, learning about aircraft systems and potentially experiencing air experience flights in military aircraft. For aviation enthusiasts, this is the dream.</p>
+                <div class="camp-highlights">
+                    <span>IAF Station Visit</span>
+                    <span>Air Experience Flights</span>
+                    <span>Gliding</span>
+                    <span>Meteorology</span>
+                </div>
+            </div>
+
+            <div class="camp-card">
+                <div class="camp-icon"><i class="fas fa-snowflake"></i></div>
+                <div class="camp-tag">EXTREME ADVENTURE</div>
+                <h3>NATIONAL INTEGRATION CAMP (NIC)</h3>
+                <div class="camp-location"><i class="fas fa-map-marker-alt"></i> Various States (Rotational)</div>
+                <p>The NIC brings together cadets from all 17 directorates to live, train and celebrate together — breaking barriers of language, religion and region. Cultural nights, inter-state sports, folk dance performances and joint adventures make this the most emotionally transformative NCC experience.</p>
+                <div class="camp-highlights">
+                    <span>17 Directorates</span>
+                    <span>Cultural Exchange</span>
+                    <span>Adventure Sports</span>
+                    <span>National Integration</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section dark-cs">
+            <h2 class="content-h2 center">SOCIAL SERVICE <span class="accent">INITIATIVES</span></h2>
+            <p class="center-text">NCC cadets don't just train — they serve. The NCC's social service wing has made a measurable difference in communities across India.</p>
+            <div class="social-grid">
+                <div class="social-item"><i class="fas fa-tint"></i><h4>Blood Donation Camps</h4><p>Annual blood donation drives saving thousands of lives each year across India.</p></div>
+                <div class="social-item"><i class="fas fa-tree"></i><h4>Tree Plantation</h4><p>Million-tree plantation drives combating deforestation and climate change.</p></div>
+                <div class="social-item"><i class="fas fa-hands-helping"></i><h4>Disaster Relief</h4><p>NCC cadets are first responders in floods, earthquakes and other natural disasters.</p></div>
+                <div class="social-item"><i class="fas fa-book"></i><h4>Education for All</h4><p>Literacy programs, school building projects and digital education drives in rural areas.</p></div>
+                <div class="social-item"><i class="fas fa-recycle"></i><h4>Swachh Bharat</h4><p>Active participation in the Clean India Mission — organizing cleanliness drives in public spaces.</p></div>
+                <div class="social-item"><i class="fas fa-hospital"></i><h4>COVID Warriors</h4><p>During COVID-19, NCC cadets served as volunteers at vaccination centres and quarantine facilities.</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CERTIFICATES PAGE -->
+<div class="page" id="page-certificates">
+    <div class="page-hero cert-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <div class="page-tag">SECTION 05</div>
+            <h1>NCC <span class="accent">CERTIFICATES</span></h1>
+            <p>Your Passport to India's Armed Forces</p>
+        </div>
+    </div>
+
+    <div class="page-body">
+        <div class="content-section">
+            <p class="intro-text">NCC Certificates (A, B and C) are among the most valuable qualifications a young Indian can obtain. They provide direct advantages in UPSC, SSB interviews, government jobs and university admissions — a documented proof of discipline, service and leadership.</p>
+        </div>
+
+        <div class="cert-showcase">
+
+            <div class="cert-card a-cert">
+                <div class="cert-header">
+                    <div class="cert-letter">A</div>
+                    <div class="cert-info">
+                        <h3>'A' CERTIFICATE</h3>
+                        <div class="cert-wing">Junior Division / Wing (Class 8–10)</div>
+                    </div>
+                </div>
+                <div class="cert-body">
+                    <div class="cert-section">
+                        <h4>ELIGIBILITY</h4>
+                        <p>Cadet must have completed 75% attendance in all parades and training activities. Must have attended at least one Annual Training Camp.</p>
+                    </div>
+                    <div class="cert-section">
+                        <h4>EXAMINATION PATTERN</h4>
+                        <div class="exam-table">
+                            <div class="et-row"><span>Written Theory</span><span>100 marks</span></div>
+                            <div class="et-row"><span>Drill Practical</span><span>50 marks</span></div>
+                            <div class="et-row"><span>Weapon Training</span><span>50 marks</span></div>
+                            <div class="et-row"><span>Map Reading</span><span>25 marks</span></div>
+                        </div>
+                    </div>
+                    <div class="cert-section">
+                        <h4>KEY BENEFITS</h4>
+                        <ul class="cert-benefits">
+                            <li>Bonus marks in many state university admissions</li>
+                            <li>Eligibility for 'B' Certificate examination</li>
+                            <li>Leadership credentials for college applications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card b-cert">
+                <div class="cert-header">
+                    <div class="cert-letter">B</div>
+                    <div class="cert-info">
+                        <h3>'B' CERTIFICATE</h3>
+                        <div class="cert-wing">Senior Division / Wing (College Level)</div>
+                    </div>
+                </div>
+                <div class="cert-body">
+                    <div class="cert-section">
+                        <h4>ELIGIBILITY</h4>
+                        <p>Senior cadet with minimum 75% attendance, holder of 'A' Certificate (preferred), completion of at least two Annual Training Camps.</p>
+                    </div>
+                    <div class="cert-section">
+                        <h4>EXAMINATION PATTERN</h4>
+                        <div class="exam-table">
+                            <div class="et-row"><span>Written Theory</span><span>150 marks</span></div>
+                            <div class="et-row"><span>Drill Practical</span><span>75 marks</span></div>
+                            <div class="et-row"><span>Weapon Training</span><span>75 marks</span></div>
+                            <div class="et-row"><span>Map Reading & Field Craft</span><span>50 marks</span></div>
+                        </div>
+                    </div>
+                    <div class="cert-section">
+                        <h4>KEY BENEFITS</h4>
+                        <ul class="cert-benefits">
+                            <li>5% relaxation in cut-offs for SSB (Service Selection Board)</li>
+                            <li>Weightage in UPSC NDA / CDS examinations</li>
+                            <li>Priority in state government recruitment</li>
+                            <li>Preferred for 'C' Certificate examination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card c-cert">
+                <div class="cert-header">
+                    <div class="cert-letter">C</div>
+                    <div class="cert-info">
+                        <h3>'C' CERTIFICATE</h3>
+                        <div class="cert-wing">Senior Division — The Gold Standard</div>
+                    </div>
+                </div>
+                <div class="cert-body">
+                    <div class="cert-section">
+                        <h4>ELIGIBILITY</h4>
+                        <p>Holder of 'B' Certificate, minimum 2 years in Senior Division, 75%+ attendance, attended at least 3 training camps including one national-level camp.</p>
+                    </div>
+                    <div class="cert-section">
+                        <h4>EXAMINATION PATTERN</h4>
+                        <div class="exam-table">
+                            <div class="et-row"><span>Written Theory</span><span>200 marks</span></div>
+                            <div class="et-row"><span>Drill Practical</span><span>100 marks</span></div>
+                            <div class="et-row"><span>Weapon Training & Firing</span><span>100 marks</span></div>
+                            <div class="et-row"><span>Map Reading & Field Craft</span><span>100 marks</span></div>
+                        </div>
+                    </div>
+                    <div class="cert-section">
+                        <h4>GAME-CHANGING BENEFITS</h4>
+                        <ul class="cert-benefits gold-benefits">
+                            <li>🏅 Bonus marks in ALL central / state government jobs</li>
+                            <li>🏅 Direct advantage in SSB — military interviewers strongly favour C Certificate holders</li>
+                            <li>🏅 UPSC: Special marks in NDA Written + SSB</li>
+                            <li>🏅 Age relaxation in many defence recruitment boards</li>
+                            <li>🏅 Exemption from NCC training in NDA / IMA if joining later</li>
+                            <li>🏅 Special consideration in IPS / IAS SSB personality tests</li>
+                        </ul>
+                    </div>
+                    <div class="c-cert-gold-badge">⭐ THE MOST VALUED CADET CREDENTIAL IN INDIA ⭐</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content-section dark-cs">
+            <h2 class="content-h2 center">CERTIFICATE EXAM <span class="accent">SYLLABUS</span></h2>
+            <div class="syllabus-accordion">
+                <div class="syl-topic">
+                    <div class="syl-title">NCC Organisation & History</div>
+                    <p>History, formation, growth, structure, aims, motto, flag, organisation of the NCC. Roles of DG NCC, Directorate, Group HQ and Battalion levels.</p>
+                </div>
+                <div class="syl-topic">
+                    <div class="syl-title">Drill & Parade</div>
+                    <p>Attention, Stand at Ease, Slow March, Quick March, Saluting, Forming Fours, Dressing, About Turn, Right/Left Turn and ceremonial drill movements.</p>
+                </div>
+                <div class="syl-topic">
+                    <div class="syl-title">Weapon Training</div>
+                    <p>Names of parts, mechanism, loading, unloading, firing positions, stoppages and clearing for .22 Deluxe Rifle, INSAS and 7.62mm SLR.</p>
+                </div>
+                <div class="syl-topic">
+                    <div class="syl-title">Map Reading</div>
+                    <p>Types of maps, conventional signs, scale, marginal information, relief features, north-finding methods, compass use and six-figure grid references.</p>
+                </div>
+                <div class="syl-topic">
+                    <div class="syl-title">Field Craft & Battle Craft</div>
+                    <p>Observation, judging distance, use of ground, movement, camouflage and concealment, section formation and fire control orders.</p>
+                </div>
+                <div class="syl-topic">
+                    <div class="syl-title">First Aid & Health</div>
+                    <p>Basic first aid, DRABC protocol, treatment of wounds, fractures, burns, heat stroke, snake bite, CPR basics and bandaging techniques.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- GALLERY PAGE -->
+<div class="page" id="page-gallery">
+    <div class="page-hero gallery-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <div class="page-tag">SECTION 06</div>
+            <h1>NCC <span class="accent">GALLERY</span></h1>
+            <p>Captured Moments of Discipline and Pride</p>
+        </div>
+    </div>
+
+    <div class="page-body">
+        <div class="gallery-intro">
+            <h2 class="content-h2 center">WEAPONS OF <span class="accent">TRAINING</span></h2>
+            <p class="center-text">A visual documentation of the NCC training armoury and the culture of discipline</p>
+        </div>
+
+        <div class="gallery-masonry">
+            <div class="gal-item gal-large">
+                <img src="Traditional_10_22_vs_Tactical_10_22.jpg" alt=".22 Deluxe Rifle">
+                <div class="gal-caption">
+                    <h4>.22 DELUXE RIFLE</h4>
+                    <p>Traditional &amp; Tactical Variants — The cadet's first weapon</p>
+                </div>
+            </div>
+            <div class="gal-item">
+                <img src="Post_by__gun-gallery___1_image.jpg" alt="INSAS Rifle">
+                <div class="gal-caption">
+                    <h4>5.56mm INSAS</h4>
+                    <p>India's standard assault rifle — advanced cadet training</p>
+                </div>
+            </div>
+            <div class="gal-item">
+                <img src="download.jpg" alt="7.62 SLR">
+                <div class="gal-caption">
+                    <h4>7.62mm SLR</h4>
+                    <p>The battle-proven Self Loading Rifle — a legacy weapon</p>
+                </div>
+            </div>
+            <div class="gal-item gal-tall">
+                <img src="wall1.jpg" alt="India Emblem">
+                <div class="gal-caption">
+                    <h4>SATYAMEVA JAYATE</h4>
+                    <p>The Lion Capital of Ashoka — National Emblem of India</p>
+                </div>
+            </div>
+            <div class="gal-item gal-wide">
+                <div class="gal-quote-card">
+                    <div class="gq-text">"The NCC cadet who wears the uniform with pride today will lead the nation with honour tomorrow."</div>
+                    <div class="gq-attr">— NCC Ethos</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Profile -->
+        <div class="content-section dark-cs profile-section">
+            <h2 class="content-h2 center">PROJECT <span class="accent">PROFILE</span></h2>
+            <div class="profile-card">
+                <div class="profile-img-wrap">
+                    <img src="id.png" alt="Gibson Pal Singh" class="profile-img" onerror="this.style.display='none'">
+                    <div class="profile-emblem">
+                        <img src="wall1.jpg" alt="NCC" class="profile-emblem-img">
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-tag">PROJECT CREATOR</div>
+                    <h2 class="profile-name">GIBSON PAL SINGH</h2>
+                    <div class="profile-details">
+                        <div class="pd-row"><span>Roll No.</span><strong>1215</strong></div>
+                        <div class="pd-row"><span>Semester</span><strong>4th Semester, CSE</strong></div>
+                        <div class="pd-row"><span>Institution</span><strong>GNDEC Ludhiana</strong></div>
+                        <div class="pd-row"><span>Subject</span><strong>Web Technology Lab</strong></div>
+                        <div class="pd-row"><span>Year</span><strong>2026</strong></div>
+                    </div>
+                    <p class="profile-bio">This NCC Command Portal is a comprehensive digital resource designed to educate, inspire and inform students about the National Cadet Corps — India's premier youth development organisation. Built with passion for the corps and commitment to web excellence.</p>
+                    <div class="profile-badge">NCC COMMAND PORTAL © 2026</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+    <div class="footer-inner">
+        <div class="footer-left">
+            <div class="footer-logo">★ NCC <span>COMMAND</span></div>
+            <p>National Cadet Corps Digital Command Portal</p>
+            <p>A comprehensive educational resource for NCC cadets and aspirants</p>
+        </div>
+        <div class="footer-center">
+            <div class="footer-motto">
+                <div class="fm-hindi">एकता और अनुशासन</div>
+                <div class="fm-english">Unity and Discipline</div>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>PROJECT BY</p>
+            <strong>Gibson Pal Singh (1215)</strong>
+            <p>CSE 4th Semester</p>
+            <p>GNDEC Ludhiana © 2026</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>NCC COMMAND PORTAL — FOR EDUCATIONAL PURPOSES</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
